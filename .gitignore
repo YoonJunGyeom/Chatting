@@ -1,6 +1,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/intellij,java,eclipse,maven,gradle
 # Edit at https://www.toptal.com/developers/gitignore?templates=intellij,java,eclipse,maven,gradle
 
+### DB info ###
+application-local.properties
+application-dev.properties
+
 ### Eclipse ###
 .metadata
 bin/
