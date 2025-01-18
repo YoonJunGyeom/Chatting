@@ -17,5 +17,6 @@
         from MEMBER_TBL
         where MEMBER_ID = #{memberId}
     </select>
-
+ 
+ 
 </mapper>
