@@ -11,6 +11,7 @@
             (MEMBER_TBL_SEQ.NEXTVAL, #{provider}, #{memberId}, #{memberName}, #{memberEmail}, #{memberNickName}, #{memberRole}, SYSDATE);
     </insert>
 
+
     <!-- 멤버 조회 -->
     <select id="findById" resultType="com.chatting.domain.Member" parameterType="string">
         select member_seq, member_name, member_email, member_nickname, member_role, joindate
