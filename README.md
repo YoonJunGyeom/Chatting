@@ -1,4 +1,4 @@
-# SpringBoot WebSocket Chatting Project
+# SpringBoot WebSocket Chatting Project 
 ---
 ## 1. 사용기술
 - Java 11
