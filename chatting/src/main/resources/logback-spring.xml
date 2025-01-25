@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+
+    <!-- Appenders : 전달받은 로그를 어디에 출력할 지 결정 (콘솔, 파일저장, 데이터베이스 등등) -->
+    <!-- encoder : 출력할 로그의 형식 -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <Pattern>%d %5p [%c] %m%n</Pattern>
+        </encoder>
+    </appender>
+
+    <appender name="console-infolog" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <Pattern>%d %5p %m%n</Pattern>
+        </encoder>
+    </appender>
+
+    <!-- logger : log의 출력 level을 설정, 첫번째 logger name은 src>main>java 디렉토리의 패키지 경로 -->
+    <logger name="com.chatting" level="DEBUG" appender-ref="console-infolog"/>
+    <logger name="jdbc.sqlonly" level="INFO" appender-ref="console-infolog"/>
+
+    <!-- sql 쿼리문을 표 형식으로 콘솔에 출력 -->
+    <logger name="jdbc.resultsettable" level="INFO" appender-ref="console-infolog"/>
+
+    <logger name="org.springframework" level="INFO" appender-ref="console-infolog"/>
+    <logger name="org.apache" level="INFO" appender-ref="console-infolog"/>
+
+    <!-- Root Logger -->
+    <root level="off">
+        <appender-ref ref="console"/>
+    </root>
+</configuration>
